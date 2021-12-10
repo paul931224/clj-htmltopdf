@@ -27,6 +27,7 @@
    if you want to use an absolute path to a file on disk, you MUST prefix your uri with 'file:' else it will
    be treated as a relative URI and resolved via clojure.java.io/resource (likely resulting in a nil return)"
   ^String [^String base-uri ^String uri]
+  (print "PDF-generator test: " base-uri " : " uri)
   (if-not (string/blank? uri)
     (let [possibly-relative-uri      (URI. uri)
           possibly-relative-base-uri (if-not (string/blank? base-uri)
@@ -44,7 +45,6 @@
                              (.resolve possibly-relative-base-uri possibly-relative-uri)
                              possibly-relative-uri)
               url          (io/resource (str relative-uri))]
-          (print "Paul teszt: " url)
           (if url (str url)))))))
 
 (defn set-uri-resolver!

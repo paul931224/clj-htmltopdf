@@ -9,4 +9,4 @@
         com.openhtmltopdf/openhtmltopdf-svg-support     {:mvn/version "1.0.10"}
         org.jsoup/jsoup                                 {:mvn/version "1.14.3"}
         commons-io/commons-io                           {:mvn/version "2.6"}
-        hiccup                                          {:mvn/version "1.0.5"}}}
+        hiccup/hiccup                                   {:mvn/version "1.0.5"}}}
