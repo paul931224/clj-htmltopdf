@@ -44,6 +44,7 @@
                              (.resolve possibly-relative-base-uri possibly-relative-uri)
                              possibly-relative-uri)
               url          (io/resource (str relative-uri))]
+          (print "Paul teszt: " url)
           (if url (str url)))))))
 
 (defn set-uri-resolver!
