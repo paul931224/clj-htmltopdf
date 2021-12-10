@@ -125,5 +125,6 @@
       ; this is a little weird, but because of the whole piped stream thing in write-pdf!, we need to render the
       ; PDF in a future. if something throws an exception during rendering, it would otherwise get eaten silently by
       ; the future... except if we deref the future! thus the explicit call to deref it here
+      (println "mukodik egyaltalan?")
       (deref renderer)
       result)))
